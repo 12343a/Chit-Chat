@@ -7,7 +7,7 @@ def BFS(visited,graph,node):
         m = q.pop(0)
         print(m,end=" ")
 
-        for n1 in graph.get(m):
+        for n1 in graph.get(m, []):
             if n1 not in visited:
                 visited.append(n1)
                 q.append(n1)
